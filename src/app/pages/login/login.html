@@ -1,0 +1,66 @@
+<div
+  class="d-flex flex-column justify-content-between"
+  style="width: 100vw; height: 100vh; background-color: #504461;"
+>
+  <!-- Cabeçalho -->
+  <div style="height: 10vh;"></div>
+
+  <!-- Formulário centralizado -->
+  <div class="d-flex justify-content-center align-items-center" style="flex: 1;">
+    <div class="d-flex justify-content-center align-items-center gap-4">
+
+      <form
+        class="shadow p-4 rounded-4 d-flex flex-column justify-content-around"
+        style="background-color: #272838; color: white; height: 50vh; min-width: 300px;"
+        (ngSubmit)="login()"
+      >
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            required
+            [(ngModel)]="email"
+            name="email"
+          />
+          <div id="emailHelp" class="form-text" style="color: gray">
+            We'll never share your email with anyone else.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            required
+            [(ngModel)]="password"
+            name="password"
+          />
+
+          <div class="mb-3 form-check py-2">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column justify-content-center align-items-center gap-2">
+          <button type="submit" class="btn" style="background-color: #5d536b; color: white;">
+            Submit
+          </button>
+          <p class="m-0">
+            Don't have an account?
+            <a href="#" class="text-decoration-none" style="color: #7d6b91;">Sign-up!</a>
+          </p>
+        </div>
+      </form>
+
+
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <div style="width: 100vw; height: 10vh;"></div>
+</div>
